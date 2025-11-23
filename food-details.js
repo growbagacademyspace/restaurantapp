@@ -7,16 +7,16 @@ const food = foodData.find(f => f.id == foodId);
 
 if (food) {
     foodDetailsContainer.innerHTML = `
-        <div class="row">
-            <div class="col-md-6">
-                <img src="${food.image}" class="img-fluid" alt="${food.name}">
+        <div class="md:flex md:space-x-8">
+            <div class="md:w-1/2">
+                <img src="${food.image}" alt="${food.name}" class="w-full h-auto rounded-lg shadow-md">
             </div>
-            <div class="col-md-6">
-                <h2>${food.name}</h2>
-                <p><strong>Price:</strong> $${food.price.toFixed(2)}</p>
-                <p><strong>Rating:</strong> ${food.rating}</p>
-                <p>${food.description}</p>
-                <button class="btn btn-primary" id="order-now-btn">Order Now</button>
+            <div class="md:w-1/2 mt-4 md:mt-0">
+                <h1 class="text-4xl font-bold mb-4">${food.name}</h1>
+                <p class="text-2xl text-yellow-600 font-semibold mb-4">$${food.price.toFixed(2)}</p>
+                <p class="text-lg text-gray-600 mb-4">Rating: ${food.rating} / 5</p>
+                <p class="text-gray-700 leading-relaxed mb-6">${food.description}</p>
+                <button id="order-now-btn" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">Order Now</button>
             </div>
         </div>
     `;
@@ -36,5 +36,5 @@ if (food) {
     });
 
 } else {
-    foodDetailsContainer.innerHTML = '<p>Food item not found.</p>';
+    foodDetailsContainer.innerHTML = '<p class="text-center text-red-500">Food item not found.</p>';
 }

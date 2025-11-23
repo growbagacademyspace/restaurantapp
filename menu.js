@@ -4,21 +4,20 @@ const displayFood = (foodItems) => {
     foodContainer.innerHTML = '';
     foodItems.forEach(food => {
         const foodCard = document.createElement('div');
-        foodCard.className = 'col-md-4';
+        foodCard.className = 'bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300';
+        foodCard.setAttribute('data-id', food.id);
         foodCard.innerHTML = `
-            <div class="card food-card" data-id="${food.id}">
-                <img src="${food.image}" class="card-img-top" alt="${food.name}">
-                <div class="card-body">
-                    <h5 class="card-title">${food.name}</h5>
-                    <p class="card-text">$${food.price.toFixed(2)}</p>
-                    <p class="card-text">Rating: ${food.rating}</p>
-                </div>
+            <img src="${food.image}" alt="${food.name}" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2">${food.name}</h2>
+                <p class="text-xl text-yellow-600 font-semibold mb-2">$${food.price.toFixed(2)}</p>
+                <p class="text-gray-600">Rating: ${food.rating} / 5</p>
             </div>
         `;
         foodContainer.appendChild(foodCard);
     });
 
-    document.querySelectorAll('.food-card').forEach(card => {
+    document.querySelectorAll('.bg-white').forEach(card => {
         card.addEventListener('click', () => {
             const foodId = card.getAttribute('data-id');
             window.location.href = `food-details.html?id=${foodId}`;

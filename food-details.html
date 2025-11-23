@@ -3,48 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Details</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Food Details - The Golden Spoon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Restaurant</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="menu.html">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="orders.html">Orders</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="careers.html">Careers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <a href="signin.html" class="btn btn-outline-light me-2">Sign In</a>
-                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-yellow-600">The Golden Spoon</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-500 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="menu.html" class="text-gray-500 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Menu</a>
+                        <a href="orders.html" class="text-gray-500 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Orders</a>
+                        <a href="careers.html" class="text-gray-500 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Careers</a>
+                        <a href="contact.html" class="text-gray-500 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-4 flex items-center md:ml-6">
+                        <a href="signin.html" class="text-gray-500 hover:text-yellow-600 px-3 py-2 rounded-md text-sm font-medium">Sign In</a>
+                        <a href="signup.html" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-md text-sm">Sign Up</a>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div id="food-details-container" class="container mt-4">
-        <!-- Food details will be loaded here -->
-    </div>
+    <!-- Food Details Section -->
+    <main id="food-details-container" class="max-w-4xl mx-auto mt-12 p-8 bg-white shadow-lg rounded-lg">
+        <!-- Food details will be loaded here by food-details.js -->
+    </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">The Golden Spoon</h3>
+                    <p class="text-gray-400">Making every meal a special occasion.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="menu.html" class="text-gray-400 hover:text-white">Menu</a></li>
+                        <li><a href="orders.html" class="text-gray-400 hover:text-white">Orders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+                    <p class="text-gray-400">Follow us on social media to stay up-to-date on our latest promotions and offerings.</p>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-4 text-center text-gray-400">
+                <p>&copy; 2024 The Golden Spoon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="data.js"></script>
     <script src="food-details.js"></script>
 </body>

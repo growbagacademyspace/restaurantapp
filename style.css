@@ -1,0 +1,8 @@
+.food-card {
+    cursor: pointer;
+}
+
+.food-card img {
+    height: 200px;
+    object-fit: cover;
+}
